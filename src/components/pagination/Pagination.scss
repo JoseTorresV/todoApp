@@ -1,0 +1,55 @@
+.hideTotalPagesInfo {
+  display: none;
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+    display: block;
+  }
+}
+
+.pagination-container {
+  padding: 1rem;
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+
+  button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    .showTotalPagesInfo {
+      display: none;
+    }
+
+    button {
+      padding: 6px 10px;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    .showTotalPagesInfo {
+      display: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+}

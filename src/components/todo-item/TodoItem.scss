@@ -1,0 +1,149 @@
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.todo-item p {
+  flex: 1;
+  margin-left: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.todo-item .checkbox {
+  cursor: pointer;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+.todo-item .checkbox:checked {
+  background-color: #007bff;
+}
+
+.todo-item .checkbox:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 18px;
+}
+
+.delete-button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #d62839;
+  }
+}
+
+.save-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.edit-button {
+  background-color: #b9b5b2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+
+  &:hover {
+    background-color: #97918c;
+  }
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: #e63946;
+  border: 1px solid #e63946;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 10px;
+
+  &:hover {
+    background-color: #e6394614;
+  }
+}
+
+.container-todo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+.container-buttons {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+.hideTotalPagesInfo {
+  display: none;
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+    display: block;
+  }
+}
