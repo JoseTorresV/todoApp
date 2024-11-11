@@ -33,7 +33,7 @@ const calculateTotalPages = (todos: Todo[], pageSize: number) => {
  */
 const useTodoStore = create<TodoStoreState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       todos: [],
       currentPage: 1,
       pageSize: 10, // Numero di risultati per pagina
